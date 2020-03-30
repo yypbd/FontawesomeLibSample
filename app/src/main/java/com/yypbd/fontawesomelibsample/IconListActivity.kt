@@ -16,8 +16,8 @@ class IconListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_icon_list)
+
         val iconList = ArrayList<IconItem>()
-        val intent = intent
         val type = intent.getIntExtra("font_type", 0)
         val fontType: FontType
         fontType = when (type) {

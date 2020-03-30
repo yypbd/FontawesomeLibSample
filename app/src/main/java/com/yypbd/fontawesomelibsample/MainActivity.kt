@@ -1,6 +1,7 @@
 package com.yypbd.fontawesomelibsample
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -55,11 +56,10 @@ class MainActivity : AppCompatActivity() {
             textDrawable.textSize = 50f
             val tf =
                 FontawesomeLib.getInstance().getTypeface(FontawesomeLib.FontType.TYPE_SOLID)
-            textDrawable.setTypeface(tf)
-            textDrawable.setText(
-                FontawesomeLib.getInstance()
-                    .getText(FontawesomeLib.FontType.TYPE_SOLID, "asterisk")
-            )
+            textDrawable.typeface = tf
+            textDrawable.text = FontawesomeLib.getInstance()
+                .getText(FontawesomeLib.FontType.TYPE_SOLID, "asterisk")
+            textDrawable.setTextColor(Color.RED)
             imageViewTest.background = textDrawable
         })
     }
